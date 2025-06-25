@@ -76,3 +76,26 @@ if(age>18){
 else if(age<18){
     console.log("you are not eligible to vote")
 }
+else{
+    console.log("equal to 18")}
+for(let i=0;i<5;i++)
+    console.log("For loop iteration"+i);
+let k=0;
+while(k<5){
+    console.log("while loop iteration: "+j)
+    k++;
+}
+let l=0;
+do{
+    console.log("Do-while loop iteration: "+l)
+    l++;
+}
+while(l<5);
+let arr1=[10,20,30,40,50]
+for(let value of arr1){
+    console.log("for...of loop values"+value);
+}
+let obj={a:1,b:2,c:3};
+for(let key in obj){
+    console.log("for ..of loop key: "+key)
+}
