@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: darkblue;
+            font-family: cursive
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }</style>
 </head>
 <body>
+    <h1>Welcome to style demo</h1>
+    <br>
+    <p>this is a paragraph demonstrating the style applied to this document</p>
+    <button onclick="g()">Click me</button>
+    <br>
+    <button onclick="f()">Toggle Background Color</button>
+    <br>
+    <button onclick="diss()">Toggle Background Color</button>
+    <div class="division-block" style="display: none;">
+        <h2>heading of Division Block</h2>
+        <p>This block can be toggled on and off.</p></div>
+    <script>
+        let shiva = false;
+        function f(){
+            if (!shiva) {
+                document.body.style.backgroundColor = "goldenrod";
+                document.getElementsByTagName("h1")[0].style.backgroundColor = "red";
+            } else if(shiva){
+                document.body.style.backgroundColor = "lightgreen";
+                document.getElementsByTagName("h1")[0].style.backgroundColor = "pink";
+            }
+            else{
+                document.body.style.backgroundColor = "red";
+                document.getElementsByTagName("h1")[0].style.backgroundColor = "purple";
+            }
+            shiva = !shiva;
+        }
+        function g() {
+            let a =["red","blue","green.blue","pink","yellow"];
+            let i = 0;
+            setInterval(() =>{
+                document.body.style.backgroundColor = a[i];
+                i=(i+1)%a.length;
+            },1000)}
+        function diss(){
+            let div=document.querySelector('.division-block');
+            if(div.style.display === 'none'){
+                div.style.display = 'block';
+            } else {
+                div.style.display = 'none';
+            }
+        }
+    </script>
     
     
 </body>

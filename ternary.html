@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: darkblue;
+            font-family: cursive
+        }
+       
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }</style>
+</head>
+<body>
+    <h1>Welcome to style demo</h1>
+    <br>
+    <p>this is a paragraph demonstrating the style applied to this document</p>
+    <button onclick="f()">Click me</button>
+    <script>
+        function f() {
+            let a=document.body.style.backgroundColor;
+            a=a==="goldenrod"?"lightgreen":"goldenrod";
+            document.body.style.backgroundColor = a;
+        }
+        </script>
+</body> 
+</html> 
