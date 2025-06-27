@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <p id="greeting">hi there</p>
+    <p id="greeting">Hi there!</p>
+    <h1 class="he">shiva</h1>
+    <h2>kavi</h2>
+    <p class="he">hello</p>
     <input type="text" id="nameInput" placeholder="Enter your name">
     <button onclick="f()">Greet</button>
     <script>
+        document.title="Hello World";
         function f(){
-        document.getElementsById("nameInput").value;
-        document.getElementById("greeting").innerText=`Hello, ${name}`;
+        var a=document.getElementById("nameInput").value;
+        document.getElementsByClassName("he")[0].innerHTML=`Hello, ${a}`;
+        document.getElementById("greeting").innerText=`Hello, ${a}!`;
+        document.getElementsByTagName("h2")[0].innerText=`Hello, ${a}!`;
+        const newHeading=document.createElement("h3");
+        newHeading.innerText=`shiva, ${name}!`;
+        document.body.appendChild(newHeading);
     }
+    
     </script>
     
-</body>
-</html>
+</body></html>

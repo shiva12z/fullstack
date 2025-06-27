@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>first heading</h1>
+        <p>Lore ipsum dolor sit amet modi porno hello can you be polite that is the case what the hell is happening the
+            problem is you don't know anything and you are not understanding
+        </p>
+        <button onclick="f()">Click me</button>
+        <script>
+            function f(){
+                const firstContainer=document.querySelector(".container");
+                firstContainer.parentNode.removeChild(firstContainer);
+                const newHeading=document.createElement("h1");
+                newHeading.innerText="New Heading";
+                document.body.insertBefore(newHeading,document.body.firstChild);
+                document.querySelector(".container").innerHTML="heading from javascript";
+            }
+        </script>
+        <script></script>
+    </div>
+</body>
+
+
+</html>
