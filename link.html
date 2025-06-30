@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flow-root;
+            background-color: lightgreen;
+        }
+        .container2{
+            display:flow-root;
+            background-color: lightblue;
+        }
+        .container3{
+            display:flow-root;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shiva</h1>
+        <p>Welcome this is a paragraph</p></div>
+    <br><br>
+    <div class="container2">
+        <h2>Shiva 2</h2>
+        <p>This is a paragraph</p></div><br><br>
+    <a href="https://www.google.com">Link</a><br><br>
+    <button onclick="f()">Click Me</button><br><br>
+    <div class="container3">
+        <h2>Shiva 3</h2>
+        <p>This is another paragraph</p></div><br><br>
+    <button onclick="g()">Change Class</button><br><br>
+    <script>
+        function f() {
+            let a = document.getElementsByTagName('a');
+            a[0].setAttribute('href','https://amazon.com');
+        }
+        function g(){
+            const b=document.querySelectorAll('.container2');
+            b.forEach((element) => {
+                element.setAttribute('class','container3');
+            });}
+        </script>
+</body>
+</html>
